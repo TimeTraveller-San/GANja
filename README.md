@@ -16,16 +16,17 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 - ~~Basic GAN~~
 - ~~Historical weight averaging ([Tim et. al.](https://arxiv.org/abs/1606.03498))~~
 - ~~TTUR (works surprisingly good) [Heusel et. al.](https://arxiv.org/abs/1706.08500)~~
-- ~~Use config files~~
-- ~~Latent walk~~
-- ~~Train Time comparison~~
-- ~~Load and save model for continuous training~~
-- Current GAN for general size and not just 64x64 pixels
-- Other GAN losses like WGAN, RaLSGAN
-- New dataset and C-GANs
-- Progressively growing GANs - ProGAN, BigGAN, StyleGAN
-- More TODOs
-- Add comments
+- ~~Use config files.~~
+- ~~Latent walk.~~
+- ~~Train Time comparison.~~
+- ~~Load and save model for continuous training.~~
+- Current GAN for general size and not just 64x64 pixels.
+- Implement the FID metric.
+- Other GAN losses like WGAN, RaLSGAN.
+- New dataset and C-GANs.
+- Progressively growing GANs - ProGAN, BigGAN, StyleGAN.
+- More TODOs...
+- Add comments.
 
 # Latent walk examples:
 ![](./images/latent_walk/girl_0.gif)
