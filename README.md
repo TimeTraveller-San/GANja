@@ -1,5 +1,5 @@
-# GAN-Experiments
-This repo is a testbench for GAN related experiments. I plan to implement, scrutinize and carefully understand various GANs related research papers.
+# GANja - Test bench for my GAN Experiments
+This repo is a testbench for my immature GAN related experiments. I plan to implement and carefully understand various GAN related research papers.
 
 ### Generated images after 1500 epochs:
 ![](./images/all.png)
@@ -28,16 +28,17 @@ This repo is a testbench for GAN related experiments. I plan to implement, scrut
 - Add comments
 
 # Latent walk examples:
-![](./latent_walk/girl_0.gif)
-![](./latent_walk/girl_1.gif)
-![](./latent_walk/girl_2.gif)
-![](./latent_walk/girl_3.gif)
-![](./latent_walk/girl_4.gif)
+![](./images/latent_walk/girl_0.gif)
+![](./images/latent_walk/girl_1.gif)
+![](./images/latent_walk/girl_2.gif)
+![](./images/latent_walk/girl_3.gif)
+![](./images/latent_walk/girl_4.gif)
 
 # End notes
-Thank you to kaggle for organizing the [Generative Dog Images](https://www.kaggle.com/c/generative-dog-images/discussion) competition because of which I learned everything about GANs.
+- Thank you to kaggle for organizing the [Generative Dog Images](https://www.kaggle.com/c/generative-dog-images/discussion) competition because of which I learned everything about GANs.
 
-http://www.thiswaifudoesnotexist.net/ wish I made this before them.
+- http://www.thiswaifudoesnotexist.net/ wish I made this before them.
 
-CUTE
+- No I dont smoke weed. I just like the PUN.
+
 ![cute](https://i.imgur.com/P9uIFUO.gif)
