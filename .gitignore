@@ -1,0 +1,6 @@
+data/*
+logs/*
+.ipynb_checkpoints/*
+__pycache__/*
+data.tgz
+_*
