@@ -1,4 +1,4 @@
-# GANja - Test bench for my GAN Experiments
+# GANja - Test bench for my GAN related Experiments
 This repo is a testbench for my immature GAN related experiments. I plan to implement and carefully understand various GAN related research papers.
 
 ### Generated images after 1500 epochs:
@@ -10,7 +10,7 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 - `config.ini` contains all the hyperparameters and other training details.
 - `networks.py` contain the Generator and Discriminator network classes.
 - `load_data.py` is the dataloader.
-
+- 1500 epoch took ~16hours on my GTX 1060 6GB, i7 6700 and 16GB RAM.
 
 # Todo (in order of priority):
 - ~~Basic GAN~~
@@ -33,6 +33,11 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 ![](./images/latent_walk/girl_2.gif)
 ![](./images/latent_walk/girl_3.gif)
 ![](./images/latent_walk/girl_4.gif)
+![](./images/latent_walk/girl_5.gif)
+![](./images/latent_walk/girl_6.gif)
+![](./images/latent_walk/girl_7.gif)
+![](./images/latent_walk/girl_8.gif)
+![](./images/latent_walk/girl_9.gif)
 
 # End notes
 - Thank you to kaggle for organizing the [Generative Dog Images](https://www.kaggle.com/c/generative-dog-images/discussion) competition because of which I learned everything about GANs.
