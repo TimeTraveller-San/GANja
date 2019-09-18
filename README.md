@@ -40,10 +40,10 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 ![](./images/latent_walk/girl_9.gif)
 
 # End notes
-- Thank you to kaggle for organizing the [Generative Dog Images](https://www.kaggle.com/c/generative-dog-images/discussion) competition because of which I learned everything about GANs.
+- Thank you kaggle for organizing the [Generative Dog Images](https://www.kaggle.com/c/generative-dog-images/discussion) competition because of which I learned everything about GANs.
 
 - http://www.thiswaifudoesnotexist.net/ wish I made this before them.
 
-- No I dont smoke weed. I just like the PUN.
+- No I don't smoke weed. I just like the pun.
 
-![cute](https://i.imgur.com/P9uIFUO.gif)
+<img src="https://i.imgur.com/P9uIFUO.gif" width="200" height="200" />
