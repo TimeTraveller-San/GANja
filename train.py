@@ -50,12 +50,13 @@ def load_state(filepath):
 
 # Initialize all params
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('configs/ls-gan.ini')
 conf = config['DEFAULT']
 
 N = 25000 # To limit number of images to load for training
 batch_size = conf.getint('batch_size')
 database = conf['data_dir']
+loss = conf['loss']
 lr_d = conf.getfloat('lr_d')
 lr_g = conf.getfloat('lr_g')
 beta1 = conf.getfloat('beta1')
@@ -118,8 +119,7 @@ averageG = False
 step = 1
 
 # load_path = False
-load_path = "logs/models/1250.torch"
-# load_path = False
+load_path = "logs_lsgan/models/300.torch"
 
 t = tqdm(total=epochs)
 epoch = 0
@@ -139,8 +139,9 @@ while epoch <= epochs:
     t.update(1)
     for ii, (real_images) in tqdm(enumerate(train_loader),
                                                     total=len(train_loader)):
+
         ############################
-        # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
+        # (1) Update D network
         ###########################
         # train with real
         netD.zero_grad()
@@ -150,7 +151,12 @@ while epoch <= epochs:
         labels = torch.full((batch_size, 1), real_label, device=device) + np.random.uniform(-0.1, 0.1)
 
         output = netD(real_images)
-        errD_real = criterion(output, labels)
+        if loss == 'lsgan':
+            # maximize (D(x)-1)^2 + D(G(z))^2
+            errD_real = torch.mean((output-labels)**2)
+        else:
+            # maximize log(D(x)) + log(1 - D(G(z)))
+            errD_real = criterion(output, labels)
         errD_real.backward()
         D_x = output.mean().item()
 
@@ -171,19 +177,29 @@ while epoch <= epochs:
         fake = netG(noise)
         labels.fill_(fake_label) + np.random.uniform(0, 0.2)
         output = netD(fake.detach())
-        errD_fake = criterion(output, labels)
+        if loss == 'lsgan':
+            # maximize (D(x)-1)^2 + D(G(z))^2
+            errD_fake = torch.mean(output**2)
+        else:
+            # maximize log(D(x)) + log(1 - D(G(z)))
+            errD_fake = criterion(output, labels)
         errD_fake.backward()
         D_G_z1 = output.mean().item()
         errD_final = errD_real + errD_fake + err_hD
         optimizerD.step()
 
         ############################
-        # (2) Update G network: maximize log(D(G(z)))
+        # (2) Update G network
         ###########################
         netG.zero_grad()
         labels.fill_(real_label)  # fake labels are real for generator cost
         output = netD(fake)
-        errG = criterion(output, labels)
+        if loss == 'lsgan':
+            # maximize (D(G(z))-1)**2
+            errG = torch.mean((output-labels)**2)
+        else:
+            # maximize log(D(G(z)))
+            errG = criterion(output, labels)
         errG.backward()
         D_G_z2 = output.mean().item()
 

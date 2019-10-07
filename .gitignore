@@ -4,3 +4,5 @@ logs/*
 __pycache__/*
 data.tgz
 _*
+logs*
+logs*/*
