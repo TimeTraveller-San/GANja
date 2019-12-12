@@ -45,6 +45,5 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 
 - http://www.thiswaifudoesnotexist.net/ wish I made this before them.
 
-- No I don't smoke weed. I just like the pun.
 
 <img src="https://i.imgur.com/P9uIFUO.gif" width="200" height="200" />
