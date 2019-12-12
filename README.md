@@ -46,4 +46,4 @@ This repo is a testbench for my immature GAN related experiments. I plan to impl
 - http://www.thiswaifudoesnotexist.net/ wish I made this before them.
 
 
-<img src="https://i.imgur.com/P9uIFUO.gif" width="200" height="200" />
+<img src="https://i.imgur.com/P9uIFUO.gif" width="200" height="300" />
