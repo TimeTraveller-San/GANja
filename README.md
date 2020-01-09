@@ -1,4 +1,4 @@
-# GANja - Test bench for my GAN related Experiments
+# Modular GANs - Test bench for my GAN related Experiments
 This repo is a testbench for my immature GAN related experiments. I plan to implement and carefully understand various GAN related research papers.
 
 ### Generated images after 1500 epochs:
